@@ -1,4 +1,4 @@
-# ChronoScope — Discover the Day
+# ChronoScope - Discover the Day
 
 A responsive Flask web app that explores historical events associated with any calendar date. It retrieves event summaries from Wikipedia's On-this-day feed and discovers related images through Wikimedia Commons.
 
