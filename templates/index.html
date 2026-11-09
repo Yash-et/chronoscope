@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11131a">
+  <meta name="description" content="Explore the events, people and moments that shaped history on this date.">
+  <title>ChronoScope — Discover the Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">C</span><span>CHRONO<span class="brand-light">SCOPE</span></span></a>
+    <span class="top-note"><span class="live-dot"></span> A window into world history</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">THE PAST, ONE DAY AT A TIME</p>
+      <h1>Every date has<br><em>a story.</em></h1>
+      <p class="hero-copy">Travel through the moments, discoveries and turning points that made this day unforgettable.</p>
+      <div class="date-control">
+        <label for="dateInput">EXPLORE A DATE</label>
+        <div class="date-row">
+          <input type="date" id="dateInput">
+          <button id="exploreBtn"><span>Explore day</span><span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <div class="date-stamp"><span class="stamp-line"></span><span id="dateLabel">LOADING TODAY</span><span class="stamp-line"></span></div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="galleryHeading">
+      <div class="section-heading">
+        <div><p class="eyebrow">A GLIMPSE INTO THE PAST</p><h2 id="galleryHeading">The day in pictures</h2></div>
+        <span class="section-index">01 / VISUAL ARCHIVE</span>
+      </div>
+      <div id="gallery" class="gallery">
+        <div class="gallery-placeholder">Gathering moments from the archives…</div>
+      </div>
+    </section>
+
+    <section class="events-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">MOMENTS THAT MATTERED</p><h2>On this day in history</h2></div>
+        <span class="section-index" id="eventCount">HISTORICAL TIMELINE</span>
+      </div>
+      <div class="filter-row" id="filters">
+        <button class="filter active" data-filter="all">All moments</button>
+        <button class="filter" data-filter="events">Events</button>
+        <button class="filter" data-filter="births">Born</button>
+        <button class="filter" data-filter="deaths">Remembered</button>
+        <button class="filter" data-filter="holidays">Observances</button>
+      </div>
+      <div id="timeline" class="timeline">
+        <div class="loading-card">Opening the history archives…</div>
+      </div>
+      <p class="source-note" id="sourceNote"></p>
+    </section>
+  </main>
+
+  <footer><span class="brand"><span class="brand-mark small">C</span> CHRONOSCOPE</span><span>History is closer than you think.</span></footer>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
