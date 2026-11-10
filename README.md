@@ -45,6 +45,11 @@ Example: `http://127.0.0.1:5000/api/day?date=2026-11-08`
 
 This uses Wikimedia's structured public APIs rather than scraping arbitrary websites' HTML. That is more stable and makes image source/attribution information easier to preserve. Wikimedia's On-this-day feed may change or be retired; keep the data-fetching functions in `app.py` isolated so the source can be replaced later.
 
+## Sample Images
+
+<img width="1920" height="1080" alt="Screenshot (6962)" src="https://github.com/user-attachments/assets/03e9926b-59e4-466e-8cbf-b029bee9c8be" />
+<h3 align="center">Homepage v1.0 </h3>
+
 ## Important note about dates
 
 The On-this-day feed is keyed by month and day. Selecting a different year changes the displayed calendar date, but the feed still returns events historically associated with that month/day; it does not reconstruct what happened only in the selected year.
